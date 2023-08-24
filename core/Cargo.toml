@@ -1,0 +1,10 @@
+[package]
+name = "core"
+authors = ["Seonghun <dev.seonghun@gmail.com>"]
+version.workspace = true
+edition.workspace = true
+description.workspace = true
+license.workspace = true
+
+[dependencies]
+gluesql = "0.14"

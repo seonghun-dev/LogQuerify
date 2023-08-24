@@ -1,8 +1,16 @@
-[package]
-name = "log_querify"
-version = "0.1.0"
+[workspace]
+members = [
+    "core",
+    "storages/*"
+]
+
+[workspace.package]
+version = "0.0.1"
 edition = "2021"
+description = "LogQuerify is reading logfile to SQL"
+license = "Apache-2.0"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
+[workspace.dependencies]
+core = { path = "./core", version = "0.0.1" }
+local-file-storage = { package = "log_querify_local_file_storage", path = "./storages/local-file-storage", version="0.0.1" }
+s3-storage = { package = "log_querify_s3_storage", path = "./storages/s3-storage", version="0.0.1" }

@@ -1,5 +1,5 @@
 [package]
-name = "LogQuerify"
+name = "log_querify"
 version = "0.1.0"
 edition = "2021"
 

@@ -7,4 +7,5 @@ description.workspace = true
 license.workspace = true
 
 [dependencies]
+local-file-storage.workspace = true
 gluesql = "0.14"

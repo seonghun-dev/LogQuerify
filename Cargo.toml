@@ -12,5 +12,4 @@ license = "Apache-2.0"
 
 [workspace.dependencies]
 core = { path = "./core", version = "0.0.1" }
-local-file-storage = { package = "log_querify_local_file_storage", path = "./storages/local-file-storage", version="0.0.1" }
-s3-storage = { package = "log_querify_s3_storage", path = "./storages/s3-storage", version="0.0.1" }
+local-file-storage = { package = "local-file-storage", path = "./storages/local-file-storage", version="0.0.1" }

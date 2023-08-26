@@ -1,27 +1,9 @@
-use std::path::Path;
-
-use gluesql::{core::data::Schema, prelude::Glue};
-
-pub enum LoggerType {
-    LogBack,
-}
-
-pub struct LogCustomSchema {
-    pub schema_type: LoggerType,
-    pub format: String,
-}
-
-impl LogCustomSchema {
-    pub fn new(schema_type: LoggerType, format: String) -> Self {
-        Self {
-            schema_type,
-            format,
-        }
-    }
-    pub fn to_schema(&self) -> Schema {
-        todo!()
-    }
-}
+use {
+    core::{log_custom_schema::LogCustomSchema, logger_type::LoggerType},
+    gluesql::prelude::Glue,
+    local_file_storage::LocalFileStorage,
+    std::path::Path,
+};
 
 // By specifying the log schema type, you determine which library's log format to parse.
 // The logic for parsing the log schema varies depending on the log schema type.
@@ -44,8 +26,7 @@ fn main() {
 
     let mut glue = Glue::new(storage);
 
-    let payloads = glue
+    let _payloads = glue
         .execute("SELECT * FROM logFile.2023-08-20.log;")
-        .await
         .unwrap();
 }

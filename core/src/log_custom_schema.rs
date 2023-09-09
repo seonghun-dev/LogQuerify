@@ -1,6 +1,4 @@
-use gluesql::core::data::Schema;
-
-use crate::logger_type::LoggerType;
+use {crate::logger_type::LoggerType, gluesql::core::ast::ColumnDef};
 
 pub struct LogCustomSchema {
     pub schema_type: LoggerType,
@@ -14,7 +12,7 @@ impl LogCustomSchema {
             format,
         }
     }
-    pub fn to_schema(&self) -> Schema {
+    pub fn to_schema(&self) -> Vec<ColumnDef> {
         todo!()
     }
 }

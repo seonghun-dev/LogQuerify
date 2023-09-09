@@ -8,3 +8,4 @@ edition = "2021"
 [dependencies]
 gluesql = "0.14"
 async-trait = "0.1"
+thiserror = "1.0"

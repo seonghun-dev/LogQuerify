@@ -1072,6 +1072,7 @@ version = "0.0.1"
 dependencies = [
  "async-trait",
  "gluesql",
+ "thiserror",
 ]
 
 [[package]]
